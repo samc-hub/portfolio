@@ -78,7 +78,7 @@
     font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
     mix-blend-mode:difference;color:#fff;
   }
-  header.bar a:hover{color:var(--red);}
+  header.bar a:hover{color:#FFD500;}
   .bar__nav{display:flex;gap:22px;}
   .bar__nav a{position:relative;}
   @media(max-width:640px){.bar__nav{display:none;}}
@@ -379,6 +379,7 @@
     var iv=setInterval(function(){
       n += Math.floor(Math.random()*9)+3;
       if(n>=100){n=100;clearInterval(iv);
+        countEl.style.color="#FFD500";
         setTimeout(function(){ pre.classList.add("done"); revealHero(); }, 380);
       }
       countEl.textContent = n<10 ? "0"+n : ""+n;
